@@ -1,0 +1,19 @@
+body {
+  background-image: url('../img/background.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 0 0;
+}
+
+.container {
+  margin-top: 3rem;
+  padding: 1rem;
+  background: #3a3a3a;
+  border-radius: 20px;
+  color: white;
+  box-shadow: 0 0 40px black;
+}
+
+.header-logo {
+  margin-top: 2rem;
+}
