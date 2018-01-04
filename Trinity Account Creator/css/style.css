@@ -1,12 +1,27 @@
-body {
-  background-image: url('../img/background.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: 0 0;
+html {
+  position: relative;
+  min-height: 100%;
 }
 
-.container {
-  margin-top: 3rem;
+body {
+  background: black;
+  
+  /* Change this to the desired background image */
+  background-image: url('../img/bg-1.png');
+  /* ------------------------------------------- */
+  
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin-bottom: 10rem;
+}
+
+.formContainer {
+  margin-top: 1rem;
   max-width: 400px;
   padding: 1rem;
   background: #3a3a3a;
@@ -15,7 +30,7 @@ body {
   box-shadow: 0 0 40px black;
 }
 
-.header-logo {
+.header-logo img {
   margin-top: 2rem;
 }
 
@@ -25,4 +40,18 @@ body {
   padding-left: 1rem;
   vertical-align: middle;
   width: 70%;
+}
+
+.footerContainer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  max-width: 100%;
+  background: #3a3a3a;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.footerContainer p {
+  margin: 0;
 }

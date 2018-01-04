@@ -21,8 +21,9 @@
     throw new InvalidArgumentException("Email is empty.");
   
   if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    throw new InvalidArgumentException("Email is invalid.");
-    return "1"; // Returns that email is invalid, to update status message.
+    echo "1"; // Returns that email is invalid, to update status message.
+    //throw new InvalidArgumentException("Email is invalid."); // DEBUG
+    return;
   }
 
   try {
@@ -31,7 +32,7 @@
     $accountCheckQuery = "SELECT * FROM account WHERE username = ?";
     $accountCheckParams = array($username);
     
-    $results = $db->querySingleRow($accountCheckQuery, $accountCheckParams);
+    $results = $db->queryMultiRow($accountCheckQuery, $accountCheckParams);
     
     if ($db->getRowCount($results) > 0) {
       

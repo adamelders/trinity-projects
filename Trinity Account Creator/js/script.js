@@ -1,19 +1,16 @@
+"use strict";
+
 function submitForm() {
   
   // Set the status message.
   var statusMessage = "Please wait...";
   document.getElementById("statusMessage").value = statusMessage;
+  document.getElementById("statusMessage").style.color = "white";
   
   // Get the form input.
   var username = document.getElementById("username").value;
   var password = document.getElementById("password").value;
   var email = document.getElementById("email").value;
-  
-  // Validate form input.
-  if (username == "") {
-    document.getElementById("alert-content").innerHTML = "Please enter a username.";
-    $("alert").removeclass("hide").addClass("show");
-  }
   
   // Create a new AJAX request.
   var xhr = new XMLHttpRequest();
@@ -27,22 +24,35 @@ function submitForm() {
   // Create a callback function.
   xhr.onreadystatechange = function() {
     if (xhr.readyState == 4 && xhr.status == 200) {
-      // If the transaction was successful, update the status message.
-      if (xhr.responseText == "0")
+      // Transaction was successful.
+      if (xhr.responseText == "0") {
+        
+        // Reset the form first.
+        document.getElementById("accountForm").reset();
+        
+        // Update the status message.
         document.getElementById("statusMessage").value = "Account created successfully!";
+        document.getElementById("statusMessage").style.color = "green";
+      }
       
-      else if (xhr.responseText == "1")
+      else if (xhr.responseText == "1") {
         document.getElementById("statusMessage").value = "Email is invalid.";
+        document.getElementById("statusMessage").style.color = "yellow";
+      }
       
-      else if (xhr.responseText == "2")
+      else if (xhr.responseText == "2") {
         document.getElementById("statusMessage").value = "Account already exists.";
+        document.getElementById("statusMessage").style.color = "red";
+      }
       
-      else if (xhr.responseText == "3")
-        document.getElementById("statusMessage").value = "Unknown error occurred. Please try again.";
+      else if (xhr.responseText == "3") {
+        document.getElementById("statusMessage").value = "Unknown error occurred.<br>Please try again.";
+        document.getElementById("statusMessage").style.color = "red";
+      }
       
       // DEBUG
-      else
-        document.write(xhr.responseText);
+      /*else
+        document.write(xhr.responseText);*/
     }
   }
   
@@ -52,9 +62,9 @@ function submitForm() {
 }
 
 $("#accountForm").submit(function(event) {
-  // Cancel the form submission, so we can use AJAX instead.
-  event.preventDefault();
-  
   // Call our own AJAX function.
   submitForm();
+  
+  // Cancel the form submission, so we can use AJAX instead.
+  event.preventDefault();
 })

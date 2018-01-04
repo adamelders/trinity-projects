@@ -1,5 +1,5 @@
 <?php
-
+  
   class db {
     
     private $conn;
@@ -61,7 +61,8 @@
     // Returns an array containing all of the result set rows.
     public function queryMultiRow($query, $params) {
       if ($query) {
-        $stmt = $this->conn->query($query);
+        $stmt = $this->conn->prepare($query);
+        $stmt->execute($params);
         
         $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
         
@@ -71,12 +72,13 @@
         return null;
     }
     
-    // Returns the row count from a PDOStatement.
-    public function getRowCount($pdo) {
+    // Returns the row count from a PDO result set.
+    public function getRowCount($results) {
       
-      // Parameter must be a PDOStatement
-      if ($pdo) {
-        return $pdo->rowCount();
+      // We can use the count() function here, because the result set is either
+      // an associative or numerical array.
+      if ($results) {
+        return count($results);
       }
     }
     
