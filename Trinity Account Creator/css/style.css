@@ -5,11 +5,11 @@ html {
 
 body {
   background: black;
-  
+
   /* Change this to the desired background image */
   background-image: url('../img/bg-1.png');
   /* ------------------------------------------- */
-  
+
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center center;
