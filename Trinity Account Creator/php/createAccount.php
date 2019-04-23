@@ -22,7 +22,6 @@
   
   if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     echo "1"; // Returns that email is invalid, to update status message.
-    //throw new InvalidArgumentException("Email is invalid."); // DEBUG
     return;
   }
 

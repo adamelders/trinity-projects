@@ -45,10 +45,6 @@ function submitForm() {
           'Unknown error occurred.<br>Please try again.';
         document.getElementById('statusMessage').style.color = 'red';
       }
-
-      // DEBUG
-      /*else
-        document.write(xhr.responseText);*/
     }
   };
 
