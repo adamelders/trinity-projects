@@ -1,1 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
+html {
+  background-image: url('src/app/backgrounds/bg.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  min-height: 100%;
+}
