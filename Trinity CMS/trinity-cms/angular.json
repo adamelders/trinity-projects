@@ -23,9 +23,7 @@
               "src/favicon.ico",
               "src/assets"
             ],
-            "styles": [
-              "src/styles.css"
-            ],
+            "styles": ["src/styles.css", "src/app/bootstrap/bootstrap.min.css"],
             "scripts": []
           },
           "configurations": {
