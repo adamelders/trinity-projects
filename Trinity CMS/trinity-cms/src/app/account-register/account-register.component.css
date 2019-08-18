@@ -1,0 +1,9 @@
+.register-form-container {
+  margin: 0 auto;
+  height: 800px;
+  width: 60%;
+  padding: 1rem;
+  background-color: #343a40;
+  border-radius: 20px;
+  color: white;
+}

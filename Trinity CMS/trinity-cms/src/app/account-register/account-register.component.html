@@ -1,0 +1,19 @@
+<div class="register-form-container">
+  <div class="register-form">
+    <label for="account-name">Account Name:</label><br />
+    <input type="text" name="account-name" /><br /><br />
+    <label for="account-email">Email Address:</label><br />
+    <input type="text" name="account-email" /><br /><br />
+    <label for="account-password">Password:</label><br />
+    <input type="password" name="account-password" /><br /><br />
+    <input
+      type="button"
+      name="account-submit"
+      value="Submit"
+      (click)="createAccount()"
+    />
+  </div>
+  <div class="account-register-output">
+    <p id="account-register-output-text"></p>
+  </div>
+</div>
