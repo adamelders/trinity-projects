@@ -1,20 +1,18 @@
-.navbar {
-  margin-top: 2rem;
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 5px;
-}
-
-.dropdown-menu {
+.main-menu {
+  width: 60%;
+  margin: 2rem auto;
+  padding: 1rem;
   background-color: #343a40;
+  border-radius: 10px;
 }
 
-.dropdown-item {
+.main-menu a {
+  margin: auto 1rem;
+}
+
+#brand {
+  font-size: 18px;
+  margin: auto 1rem;
   color: white;
-}
-
-.dropdown-menu :hover {
-  color: #343a40 !important;
-  background-color: #d1d1d1;
+  float: left;
 }

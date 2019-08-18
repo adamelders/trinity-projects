@@ -5,10 +5,21 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainMenuComponent } from './main-menu/main-menu.component';
+import { AccountRegisterComponent } from './account-register/account-register.component';
+import { Routes, RouterModule } from '@angular/router';
+
+const appRoutes: Routes = [
+  { path: 'register', component: AccountRegisterComponent }
+];
 
 @NgModule({
-  declarations: [AppComponent, MainMenuComponent],
-  imports: [BrowserModule, AppRoutingModule, NgbModule],
+  declarations: [AppComponent, MainMenuComponent, AccountRegisterComponent],
+  imports: [
+    RouterModule.forRoot(appRoutes, { enableTracing: true }),
+    BrowserModule,
+    AppRoutingModule,
+    NgbModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
