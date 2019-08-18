@@ -13,3 +13,8 @@
 .dropdown-item {
   color: white;
 }
+
+.dropdown-menu :hover {
+  color: #343a40 !important;
+  background-color: #d1d1d1;
+}
