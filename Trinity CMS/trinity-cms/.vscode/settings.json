@@ -1,0 +1,34 @@
+{
+  "[css]": {
+    "editor.formatOnSave": true,
+    "editor.insertSpaces": true
+  },
+  "[html]": {
+    "editor.formatOnSave": true,
+    "editor.insertSpaces": true
+  },
+  "[javascript]": {
+    "editor.formatOnSave": true,
+    "editor.insertSpaces": true
+  },
+  "[json]": {
+    "editor.formatOnSave": true,
+    "editor.insertSpaces": true,
+    "editor.quickSuggestions": {
+      "strings": true
+    }
+  },
+  "[typescript]": {
+    "editor.formatOnSave": true,
+    "editor.insertSpaces": true
+  },
+  "html.format.wrapAttributes": "force-expand-multiline",
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": false,
+  "editor.tabSize": 2,
+  "editor.trimAutoWhitespace": true,
+  "files.insertFinalNewline": true,
+  "prettier.eslintIntegration": true,
+  "prettier.singleQuote": true,
+  "prettier.tslintIntegration": true
+}
