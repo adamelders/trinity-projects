@@ -13,6 +13,57 @@
 #brand {
   font-size: 18px;
   margin: auto 1rem;
-  color: white;
+  color: #fff;
   float: left;
+}
+
+.menu-item {
+  background: rgb(31, 31, 31);
+  padding: 5px 10px;
+  border-radius: 4px;
+  margin: 0 1rem;
+}
+
+.menu-item:hover {
+  background: rgb(116, 116, 116);
+}
+
+.menu-item a {
+  color: #fff;
+}
+
+.menu-dropdown {
+  background: rgb(31, 31, 31);
+  position: relative;
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 4px;
+  margin: 0 1rem;
+}
+
+.menu-dropdown:hover {
+  background: rgb(116, 116, 116);
+}
+
+.menu-dropdown span {
+  color: #fff;
+}
+
+.menu-dropdown-item {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.menu-dropdown-item a {
+  background: #343a40;
+  color: #fff;
+}
+
+.menu-dropdown:hover .menu-dropdown-item {
+  display: block;
 }
