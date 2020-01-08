@@ -29,7 +29,7 @@
               }
             ],
             "styles": ["src/styles.css", "src/app/bootstrap/bootstrap.min.css"],
-            "scripts": []
+            "scripts": ["src/app/bootstrap/jquery-3.3.1.slim.min.js", "src/app/bootstrap/bootstrap.bundle.min.js"]
           },
           "configurations": {
             "production": {
