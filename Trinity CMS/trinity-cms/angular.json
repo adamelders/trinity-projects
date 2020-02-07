@@ -8,7 +8,7 @@
       "schematics": {},
       "root": "",
       "sourceRoot": "src",
-      "prefix": "app",
+      "prefix": "trinity-cms-app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -29,7 +29,10 @@
               }
             ],
             "styles": ["src/styles.css", "src/app/bootstrap/bootstrap.min.css"],
-            "scripts": ["src/app/bootstrap/jquery-3.3.1.slim.min.js", "src/app/bootstrap/bootstrap.bundle.min.js"]
+            "scripts": [
+              "src/app/bootstrap/jquery-3.3.1.slim.min.js",
+              "src/app/bootstrap/bootstrap.bundle.min.js"
+            ]
           },
           "configurations": {
             "production": {
