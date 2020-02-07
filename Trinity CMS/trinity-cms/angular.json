@@ -68,7 +68,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "trinity-cms:build"
+            "browserTarget": "trinity-cms:build",
+            "liveReload": false
           },
           "configurations": {
             "production": {
