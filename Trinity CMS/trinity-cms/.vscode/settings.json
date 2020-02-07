@@ -28,7 +28,5 @@
   "editor.tabSize": 2,
   "editor.trimAutoWhitespace": true,
   "files.insertFinalNewline": true,
-  "prettier.eslintIntegration": true,
-  "prettier.singleQuote": true,
-  "prettier.tslintIntegration": true
+  "prettier.singleQuote": true
 }
