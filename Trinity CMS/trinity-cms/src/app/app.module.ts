@@ -20,7 +20,7 @@ const appRoutes: Routes = [
     MenuItemComponent,
   ],
   imports: [
-    RouterModule.forRoot(appRoutes, { enableTracing: true }),
+    RouterModule.forRoot(appRoutes, { enableTracing: true, relativeLinkResolution: 'legacy' }),
     BrowserModule,
     AppRoutingModule,
   ],
